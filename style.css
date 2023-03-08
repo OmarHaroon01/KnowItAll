@@ -1,0 +1,35 @@
+.primary-color {
+  /* background-color: #b7ac04; */
+  background-color: #6e6e6e;
+}
+
+.text-white {
+  color: white;
+}
+
+ul li a:hover {
+  color: #bbff36 !important;
+}
+
+.search-button {
+  color: white;
+  border: 1px white solid;
+  border-radius: 5px;
+  background-color: transparent;
+  font-weight: bold;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+}
+
+.search-button:hover {
+  background-color: #bbff36;
+  color: black;
+  border: 1px black solid;
+  border-radius: 5px;
+}
+
+li {
+  list-style: none;
+}
+
+
