@@ -2,6 +2,9 @@
   /* background-color: #b7ac04; */
   background-color: #6e6e6e;
 }
+.secondary-color{
+  background-color: #c7c7c7;
+}
 
 .text-white {
   color: white;
@@ -32,4 +35,17 @@ li {
   list-style: none;
 }
 
+* {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.bg-edu{
+  background: url(assets/bg-edu.jpg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.bg-contact {
+  background-color: #D4D4D4;
+}
 
