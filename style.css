@@ -31,6 +31,12 @@ ul li a:hover {
   border-radius: 5px;
 }
 
+.leaderboard-color {
+  background-color: #d7edf6;
+  border: 2px solid black;
+  border-radius: 15px;
+}
+
 li {
   list-style: none;
 }
@@ -48,4 +54,11 @@ li {
 .bg-contact {
   background-color: #D4D4D4;
 }
+.opacity:hover{
+  opacity: 75%;
+}
 
+.img-size {
+  height: 20;
+  width: 20;
+}
