@@ -58,3 +58,25 @@ li {
   opacity: 75%;
 }
 
+.img-size {
+  height: 20;
+  width: 20;
+}
+.bg-geo {
+  background: url(assets/bg-geo.png);
+  background-size: 1000px 900px;
+}
+.pastel-yellow {
+  background-color: #F7F6CF;
+}
+.pastel-green {
+  background-color: #8DA47E;
+}
+
+.pastel-blue {
+  background-color: #DDF2F4;
+}
+
+.pastel-pink {
+  background-color: #F5E2E4 ;
+}
