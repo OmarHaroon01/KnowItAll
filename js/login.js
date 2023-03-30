@@ -82,22 +82,22 @@ const email = document.getElementById("loginEmail");
 const password = document.getElementById("loginPassword");
 const spanError = document.getElementById("spanError");
 
-const validate = () => {
-    var valid = String(email.value)
-    .toLowerCase()
-    .match(
-      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-    );
+const validate = async () => {
 
-    if(!valid || password == "") {
+    if(email.value == "" || password.value == "") {
         spanError.classList.remove('d-none');
     }
-    console.log(email.value);
+
+    const res = await fetch("http://localhost:8080/login.php", {
+        method: "POST",
+        body: JSON.stringify({ "email": email.value, "password": password.value}) 
+    });
+    
 }
 
 const modify = () => {
     spanError.classList.add('d-none');
-    console.log("i am here")
+    console.log("i am here");
 }
 
 
