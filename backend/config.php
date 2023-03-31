@@ -15,6 +15,7 @@ if(mysqli_query($conn, $query)){
     //Creating user table
     $query = "CREATE TABLE IF NOT EXISTS knowitall.users (
         unid VARCHAR(255) PRIMARY KEY,
+        fullName VARCHAR(255) NOT NULL,
         email VARCHAR(255) NOT NULL,
         password VARCHAR(255) NOT NULL
     )";
@@ -33,7 +34,6 @@ if(mysqli_query($conn, $query)){
         optionFour VARCHAR(255) NOT NULL,
         answer VARCHAR(255) NOT NULL
     )";
-    echo $query;
     $output = mysqli_query($conn, $query);
     
     //Response Table
