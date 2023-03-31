@@ -46,7 +46,13 @@ if(mysqli_query($conn, $query)){
     )";
     $output = mysqli_query($conn, $query);
 
-    
+    $query = "CREATE TABLE IF NOT EXISTS knowitall.quiz_info (
+        userID VARCHAR(255),
+        topic VARCHAR(255),
+        FOREIGN KEY (userID) REFERENCES users(unid)
+    )";
+
+    $output = mysqli_query($conn, $query);  
 } else {
     die("Connection failed: " . "Error in making DB");
 }
