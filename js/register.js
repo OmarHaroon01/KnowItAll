@@ -5,19 +5,20 @@ let passwordInput2 = document.getElementById("passwordInput2")
 let errorMessage = document.getElementById("errorMessage")
 
 
-function removeError(){
+
+function removeError() {
     errorMessage.classList.add("invisible")
 }
 
 function emailValidation(email) {
     return String(email)
-      .toLowerCase()
-      .match(
-        /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-      );
-  };
+        .toLowerCase()
+        .match(
+            /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+        );
+};
 
-function registerButtonClicked() {
+async function registerButtonClicked() {
     console.log(fullnameInput.value)
     console.log(emailInput.value)
     console.log(passwordInput.value)
@@ -43,6 +44,23 @@ function registerButtonClicked() {
         errorMessage.innerHTML = "Passwords don't match"
         return
     }
+    const res = await fetch("http://localhost:8080/auth/register.php", {
+        method: "POST",
+        body: JSON.stringify({
+            "fullName": fullnameInput.value, "email": emailInput.value,
+            "password": passwordInput.value
+        }),
+    });
+    const output = await res.json();
+    if (output.error) {
+        errorMessage.classList.remove("invisible")
+        errorMessage.innerHTML = output.error
+        return
+    }
+   window.alert(output.data)
+   window.location.href= "home.html"
+    
+
 }
 
 
