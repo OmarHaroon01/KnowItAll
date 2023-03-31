@@ -1,199 +1,234 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Know It All - Quiz</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-</head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+  </head>
 
-<body class="d-flex flex-column min-vh-100">
+  <body class="d-flex flex-column min-vh-100">
     <nav class="navbar navbar-expand-lg primary-color py-3">
-        <div class="container-fluid">
-          <a class="navbar-brand ms-4" href="home.html">
-            <img src="Assets/logo_1.png" width="20%" alt="" />
-          </a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0 fs-4">
-              <li class="nav-item mx-3">
-                <a class="nav-link text-white" href="home.html">Home</a>
-              </li>
-              <li class="nav-item mx-3">
-                <a class="nav-link text-white" href="aboutus.html">About</a>
-              </li>
-              <li class="nav-item mx-3">
-                <a class="nav-link text-white" href="contactus.html">Contact Us</a>
-              </li>
-              <li class="nav-item mx-3">
-                <a class="nav-link text-white" href="register.html">Register</a>
-              </li>
-              <li class="nav-item mx-3">
-                <a class="nav-link text-white" href="login.html">Login</a>
-              </li>
-            </ul>
-            <form class="d-flex me-4" role="search">
-              <input
-                class="form-control me-2 p-2"
-                type="search"
-                placeholder="Search"
-                aria-label="Search"
-              />
-              <button class="search-button" type="submit">Search</button>
-            </form>
+      <div class="container-fluid">
+        <a class="navbar-brand ms-4 d-inline" href="home.html">
+          <img src="Assets/logo_1.png" style="max-height: 70px;" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fs-5">
+            <li class="nav-item mx-3">
+              <a class="nav-link text-white" href="home.html">Home</a>
+            </li>
+            <li class="nav-item mx-3">
+              <a class="nav-link text-white" href="aboutus.html">About</a>
+            </li>
+            <li class="nav-item mx-3">
+              <a class="nav-link text-white" href="contactus.html"
+                >Contact Us</a
+              >
+            </li>
+            <li class="nav-item mx-3">
+              <a class="nav-link text-white" href="register.html">Register</a>
+            </li>
+            <li class="nav-item mx-3">
+              <a class="nav-link text-white" href="login.html">Login</a>
+            </li>
+          </ul>
+          <form class="d-flex me-4" role="search">
+            <input
+              class="form-control me-2 p-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="search-button" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <div class="flex-grow-1 d-flex">
+      <div class="container-fluid">
+        <div class="row h-100">
+          <div class="col-3 py-5 pastel-blue">
+            <div class="row mx-3 py-2">
+              <div class="col-3">
+                <i class="fa fa-3x fa-trophy d-inline" aria-hidden="true"></i>
+              </div>
+              <div class="col-9 d-flex align-items-center">
+                <h4 class="m-0">Leaderboard</h4>
+              </div>
+            </div>
+            <div class="row mx-3 py-4">
+              <div class="col-3">
+                <i class="fa fa-3x fa-archive" aria-hidden="true"></i>
+              </div>
+              <div class="col-9 d-flex align-items-center">
+                <h4 class="m-0">Archive</h4>
+              </div>
+            </div>
+          </div>
+          <div class="col-9 pastel-pink p-5">
+            <div class="row">
+              <div class="col-1">
+                <i class="fa fa-3x fa-user-o" aria-hidden="true"></i>
+              </div>
+              <div class="col-8 d-flex align-items-center">
+                <h4 class="m-0">Omar Mohammed Haroon</h4>
+              </div>
+            </div>
+            <div class="row my-3">
+              <div class="col-4">
+                <div class="d-flex align-items-center">
+                  <i
+                    class="fa fa-2x fa-flag px-1 shadow rounded"
+                    aria-hidden="true"
+                  ></i>
+                  <div class="mx-2">Game Wins: 34</div>
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="d-flex align-items-center">
+                  <i
+                    class="fa fa-2x fa-star px-1 shadow rounded"
+                    aria-hidden="true"
+                  ></i>
+                  <div class="mx-2">Highest Score: 193</div>
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="d-flex align-items-center">
+                  <i
+                    class="fa fa-2x fa-check-square px-1 shadow rounded"
+                    aria-hidden="true"
+                  ></i>
+                  <div class="mx-2">Correct answers: 1097</div>
+                </div>
+              </div>
+            </div>
+            <div class="row mt-5 mb-3">Badges Earned</div>
+            <div class="row">
+              <div class="card-group">
+                <div class="card text-center pt-4">
+                  <img
+                    src="Assets/badge1.png"
+                    class="card-img-top mx-auto"
+                    style="max-width: 50%"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">Badge 1</h5>
+                  </div>
+                </div>
+                <div class="card text-center pt-4">
+                  <img
+                    src="Assets/badge2.png"
+                    class="card-img-top mx-auto"
+                    style="max-width: 50%"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                  </div>
+                </div>
+                <div class="card text-center pt-4">
+                  <img
+                    src="Assets/badge3.png"
+                    class="card-img-top mx-auto"
+                    style="max-width: 50%"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </nav>
-    <div class="flex-grow-1 d-flex">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-3 pastel-blue">
-                    <div class="row mx-3 my-2">
-                        <div class="col-3">
-                            <i class="fa fa-3x fa-trophy d-inline " aria-hidden="true"></i>
-                        </div>
-                        <div class="col-9 d-flex align-items-center">
-                            <h4 class="m-0">
-                                Leaderboard
-                            </h4>
-                        </div>
-                    </div>
-                    <div class="row mx-3 my-2">
-                        <div class="col-3">
-                            <i class="fa fa-3x fa-archive" aria-hidden="true"></i>
-                        </div>
-                        <div class="col-9 d-flex align-items-center">
-                            <h4 class="m-0">
-                                Archive
-                            </h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-9 pastel-pink p-5">
-                    <div class="row">
-                        <div class="col-1">
-                            <i class="fa fa-3x fa-user-o" aria-hidden="true"></i>
-                        </div>
-                        <div class="col-8 d-flex align-items-center">
-                            <h4 class="m-0">
-                                Omar Mohammed Haroon
-                            </h4>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-1 my-3">
-                            <i class="fa fa-2x fa-flag px-1 shadow rounded bg-white" aria-hidden="true"></i>
-                        </div>
-                        <div class="col-3 my-3 px-0">
-                            Game Wins: 34
-                        </div>
-                        <div class="col-1 my-3">
-                            <i class="fa fa-2x fa-star px-1 shadow rounded bg-white" aria-hidden="true"></i>
-                        </div>
-                        <div class="col-3 my-3 px-0">
-                            Highest Score: 193
-                        </div>
-                        <div class="col-1 my-3">
-                            <i class="fa fa-2x fa-check-square px-1 shadow rounded bg-white" aria-hidden="true"></i>
-                        </div>
-                        <div class="col-3 my-3 px-0">
-                            Correct answers: 1097
-                        </div>
-                    </div>
-                    <div class="row mt-5 mb-3">
-                        Badges Earned
-                    </div>
-                    <div class="row">
-                        <div class="col-2 text-center">
-                            <img class="card-img-top" style="width:8rem;" src="Assets/badge1.png" alt="Card image cap">
-                            Badge1
-                        </div>
-                        <div class="col-2 text-center">
-                            <img class="card-img-top" style="width:8rem;" src="Assets/badge2.png" alt="Card image cap">
-                            Badge2
-                        </div>
-                        <div class="col-2 text-center">
-                            <img class="card-img-top" style="width:8rem;" src="Assets/badge3.png" alt="Card image cap">
-                            Badge3
-                        </div>
-                        <div class="col-2 text-center">
-                            <img class="card-img-top" style="width:8rem;" src="Assets/badge4.png" alt="Card image cap">
-                            Badge4
-                        </div>
-                        <div class="col-2 text-center">
-                            <img class="card-img-top" style="width:8rem;" src="Assets/badge5.png" alt="Card image cap">
-                            Badge5
-                        </div>
-                    </div>
+      </div>
+    </div>
 
-                </div>
-            </div>
-        </div>
-    </div>
-    </div>
     <footer class="primary-color pt-4">
-        <div class="d-flex my-3 text-white justify-content-evenly">
-            <div class="col-2">
-                <h2>Know It All</h2>
-                <div class="my-4">
-                    <div>Bashundhara Dhaka 1230</div>
-                    <div>Bangladesh</div>
-                    <div>Phone: +XXXXXXXXXXX</div>
-                    <div>Email: knowitall@gmail.com</div>
-                </div>
-            </div>
-            <div class="col-1">
-                <h2>Menu</h2>
-                <ul class="p-0 my-4">
-                    <li>Home</li>
-                    <li class="my-2">Quiz List</li>
-                    <li class="my-2">Leaderboard</li>
-                    <li class="my-2">About</li>
-                    <li>Contact Us</li>
-                </ul>
-            </div>
-            <div class="col-2">
-                <h2>Connect With Us</h2>
-                <ul class="list-group list-group-horizontal my-4">
-                    <li class="border border-2 rounded border-light me-2">
-                        <a href="" class="btn btn-default text-white social-icon" target="_blank">
-                            <i class="fa fa-facebook"></i>
-                        </a>
-                    </li>
-                    <li class="border border-2 rounded border-light me-2">
-                        <a href="" class="btn btn-default text-white social-icon" target="_blank">
-                            <i class="fa fa-twitter"></i>
-                        </a>
-                    </li>
-                    <li class="border border-2 rounded border-light me-2">
-                        <a href="" class="btn btn-default text-white social-icon" target="_blank">
-                            <i class="fa fa-instagram"></i>
-                        </a>
-                    </li>
-                    <li class="border border-2 rounded border-light">
-                        <a href="" class="btn btn-default text-white social-icon" target="_blank">
-                            <i class="fa fa-youtube"></i>
-                        </a>
-                    </li>
-                </ul>
-            </div>
+      <div class="d-flex my-3 text-white justify-content-evenly">
+        <div class="col-2">
+          <h2>Know It All</h2>
+          <div class="my-4">
+            <div>Bashundhara Dhaka 1230</div>
+            <div>Bangladesh</div>
+            <div>Phone: +XXXXXXXXXXX</div>
+            <div>Email: knowitall@gmail.com</div>
+          </div>
         </div>
+        <div class="col-1">
+          <h2>Menu</h2>
+          <ul class="p-0 my-4">
+            <li>Home</li>
+            <li class="my-2">Quiz List</li>
+            <li class="my-2">Leaderboard</li>
+            <li class="my-2">About</li>
+            <li>Contact Us</li>
+          </ul>
+        </div>
+        <div class="col-2">
+          <h2>Connect With Us</h2>
+          <ul class="list-group list-group-horizontal my-4">
+            <li class="border border-2 rounded border-light me-2">
+              <a
+                href=""
+                class="btn btn-default text-white social-icon"
+                target="_blank"
+              >
+                <i class="fa fa-facebook"></i>
+              </a>
+            </li>
+            <li class="border border-2 rounded border-light me-2">
+              <a
+                href=""
+                class="btn btn-default text-white social-icon"
+                target="_blank"
+              >
+                <i class="fa fa-twitter"></i>
+              </a>
+            </li>
+            <li class="border border-2 rounded border-light me-2">
+              <a
+                href=""
+                class="btn btn-default text-white social-icon"
+                target="_blank"
+              >
+                <i class="fa fa-instagram"></i>
+              </a>
+            </li>
+            <li class="border border-2 rounded border-light">
+              <a
+                href=""
+                class="btn btn-default text-white social-icon"
+                target="_blank"
+              >
+                <i class="fa fa-youtube"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </footer>
-</body>
-
+  </body>
 </html>
