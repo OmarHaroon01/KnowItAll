@@ -49,6 +49,8 @@ if(mysqli_query($conn, $query)){
     $query = "CREATE TABLE IF NOT EXISTS knowitall.quiz_info (
         userID VARCHAR(255),
         topic VARCHAR(255),
+        score VARCHAR(255),
+        time TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
         FOREIGN KEY (userID) REFERENCES users(unid)
     )";
 
