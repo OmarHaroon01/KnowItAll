@@ -55,6 +55,15 @@ if(mysqli_query($conn, $query)){
     )";
 
     $output = mysqli_query($conn, $query);  
+
+
+    $query = "CREATE TABLE IF NOT EXISTS knowitall.topics (
+        topicName VARCHAR(255),
+        topicImageLocation VARCHAR(255),
+        topicDescription VARCHAR(255)
+    )";
+
+    $output = mysqli_query($conn, $query);  
 } else {
     die("Connection failed: " . "Error in making DB");
 }
