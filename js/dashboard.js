@@ -14,8 +14,8 @@ async function preLoad(){
     quizNumber.innerHTML = output.length;
     for (var i = 0; i < output.length; i++) {
         if (!output[i].score){
-            recentQuiz.innerHTML = "Please take part in the quiz"
-            recentQuiz.classList.add("fs-2")
+            recentQuiz.innerHTML = "Please take part in a quiz"
+            recentQuiz.classList.add("fs-5")
             return;
         }
         var row = document.createElement("div")
@@ -27,11 +27,11 @@ async function preLoad(){
         col2.classList.add("col-6")
 
         var topicDiv = document.createElement("div")
-        topicDiv.classList.add("fs-3")
+        topicDiv.classList.add("fs-5")
         topicDiv.innerHTML = output[i]["topic"]
 
         var scoreDiv = document.createElement("div")
-        scoreDiv.classList.add("fs-3")
+        scoreDiv.classList.add("fs-5")
         scoreDiv.innerHTML = output[i]["score"]
 
         col1.appendChild(topicDiv)

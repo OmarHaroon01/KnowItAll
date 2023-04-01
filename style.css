@@ -3,7 +3,10 @@
   background-color: #6e6e6e;
 }
 .secondary-color{
-  background-color: #c7c7c7;
+  /* background-color: #c7c7c7; */
+
+  background-image: url(/Assets/bg-1.png);
+  /* opacity: 75%; */
 }
 
 .text-white {
@@ -81,5 +84,7 @@ li {
 .pastel-pink {
   background-color: #F5E2E4 ;
 }
+
+
 
 
