@@ -15,6 +15,12 @@ const validate = async () => {
     });
     
     const output = await res.json();
+
+    
+    if(output.error) {
+        spanError.classList.remove('d-none');
+        return;
+    }
     console.log(output);
 }
 
