@@ -57,9 +57,9 @@ async function registerButtonClicked() {
         errorMessage.innerHTML = output.error
         return
     }
-   window.alert(output.data)
-   window.location.href= "home.html"
-    
+    window.alert(output.data)
+    window.location.href = "home.html"
+
 
 }
 

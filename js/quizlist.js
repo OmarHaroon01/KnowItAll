@@ -3,7 +3,6 @@ var outerRow = document.getElementById("outer-row")
 async function loadingData() {
     const res = await fetch("http://localhost:8080/home/quizlist.php", {
         method: "POST",
-        body: JSON.stringify({}),
     });
     const out = await res.json();
     output = out["data"];
@@ -25,11 +24,11 @@ async function loadingData() {
         div2.classList.add("border-dark")
 
         var img = document.createElement("img");
-        img.classList.add(...["card-img-top","h-75"])
+        img.classList.add(...["card-img-top", "h-75"])
         img.src = "http://localhost:8080/images/topiclogos/" + output[i]["topicImageLocation"]
 
         div2.appendChild(img);
-        
+
         var div3 = document.createElement("div");
         div3.classList.add("card-body")
 
@@ -44,22 +43,19 @@ async function loadingData() {
         div3.appendChild(p);
         div2.appendChild(div3);
         var div4 = document.createElement("div")
-        div4.classList.add(...["card-footer","border-dark", "text-end"])
+        div4.classList.add(...["card-footer", "border-dark", "text-end"])
 
-        var a= document.createElement("a")
+        var a = document.createElement("a")
         a.setAttribute("href", "#")
         a.classList.add(...["btn", "btn-success", "w-100"])
-        a.innerHTML= "Attempt"
+        a.innerHTML = "Attempt"
 
         div4.appendChild(a)
         div2.appendChild(div4);
         div1.appendChild(div2);
 
 
-       outerRow.appendChild(div1)
-
-
-
+        outerRow.appendChild(div1)
 
     }
 }
