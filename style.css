@@ -8,12 +8,13 @@
 .secondary-color{
   /* background-color: #c7c7c7; */
 
-  background-image: url(/Assets/bg-1.png);
+  background-image: url(/Assets/bg-2.png);
   /* opacity: 75%; */
 }
 
 .text-white {
   color: white;
+  opacity: 95%;
 }
 
 ul li a:hover {

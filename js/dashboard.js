@@ -6,7 +6,7 @@ window.onload = preLoad;
 async function preLoad(){
     const res = await fetch("http://localhost:8080/user/dashboard.php", {
         method: "POST",
-        body: JSON.stringify({ "unid": '1'}),
+        body: JSON.stringify({ "unid": '64292561c22e3'}),
     });
     const output = await res.json();
     console.log(output)
