@@ -67,6 +67,4 @@ if(mysqli_query($conn, $query)){
 } else {
     die("Connection failed: " . "Error in making DB");
 }
-
- ?> 
-
+?>
