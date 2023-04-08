@@ -20,7 +20,5 @@ if (mysqli_num_rows($output) !== 0) {
         }
 }
 echo json_encode(["data" => "", "error" => "Invalid Credentials!"]);
-// echo $query;
 
-//echo json_encode(["success"=>$output,"message"=>"Login Succcessfully"]);
 ?>
