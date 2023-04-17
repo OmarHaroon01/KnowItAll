@@ -46,7 +46,7 @@ async function loadingData() {
         div4.classList.add(...["card-footer", "border-dark", "text-end"])
 
         var a = document.createElement("a")
-        a.setAttribute("href", "#")
+        a.setAttribute("href", "quizpage.html?topic="+output[i]["topicName"])
         a.classList.add(...["btn", "btn-success", "w-100"])
         a.innerHTML = "Attempt"
 
