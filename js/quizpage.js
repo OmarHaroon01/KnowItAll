@@ -2,6 +2,7 @@ var outerRow = document.getElementById('outer-row');
 totalQuestions = -1;
 correctAnswerList = [];
 
+
 async function preload() {
 
   var params = {};

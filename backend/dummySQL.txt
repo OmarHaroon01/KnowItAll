@@ -1,0 +1,11 @@
+Topic table
+
+INSERT INTO `topics`(`topicName`, `topicImageLocation`, `topicDescription`) VALUES ('Animals','animals.png','Are you an animal lover?');
+INSERT INTO `topics`(`topicName`, `topicImageLocation`, `topicDescription`) VALUES ('Cooking','cook.png','Is cooking your hobby?');
+INSERT INTO `topics`(`topicName`, `topicImageLocation`, `topicDescription`) VALUES ('Countries','countries.png','Check your knowledge about different countries.');
+INSERT INTO `topics`(`topicName`, `topicImageLocation`, `topicDescription`) VALUES ('Geography','geography.png','Check your geographical knowledge.');
+INSERT INTO `topics`(`topicName`, `topicImageLocation`, `topicDescription`) VALUES ('General Knowledge','gk.png','Let your friends know how intellectual you are.');
+INSERT INTO `topics`(`topicName`, `topicImageLocation`, `topicDescription`) VALUES ('Sports','pol.png','Wanna check how much sports freak you are?');
+INSERT INTO `topics`(`topicName`, `topicImageLocation`, `topicDescription`) VALUES ('Politics','sports.png','What are your political views?');
+INSERT INTO `topics`(`topicName`, `topicImageLocation`, `topicDescription`) VALUES ('World History','world-history.png','How much do you know about world history?');
+
