@@ -48,5 +48,11 @@
         $("#footer-placeholder").load("footer.html");
       });
     </script>
+    <script>
+      var hasReferrer = document.referrer != "";
+      if (!hasReferrer) {
+        window.location.href = "admin.html";
+      }
+    </script>
   </body>
 </html>

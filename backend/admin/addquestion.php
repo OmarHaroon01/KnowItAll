@@ -23,7 +23,7 @@ $sql = "INSERT INTO knowitall.questions (questionID, topic, question, optionOne,
         '$optionFour','$answer')";
 
 if (mysqli_query($conn, $sql)) {
-        echo json_encode(["topic" => $topic, "question" => $question]);
+        echo json_encode(["data" => "Succesfully Added Question", "error" => ""]);
 }
 
 

@@ -1,19 +1,49 @@
-let topicInput = document.getElementById("topicInput")
+
 let questionInput = document.getElementById("questionInput")
 let optionOneInput = document.getElementById("optionOneInput")
 let optionTwoInput = document.getElementById("optionTwoInput")
 let optionThreeInput = document.getElementById("optionThreeInput")
 let optionFourInput = document.getElementById("optionFourInput")
 let correctAnswer = document.getElementById("correctAnswer")
+var hasReferrer = document.referrer != "";
+var topicID = document.getElementById("topicID")
+var form = document.getElementById("form")
+
+if (!hasReferrer) {
+  window.location.href = "admin.html";
+}
+
+
+
+const preloadValues = async () => {
+    const res = await fetch("http://localhost:8080/admin/gettopics.php", {
+      method: "POST",
+    });
+    const output = await res.json();
+    console.log(output);
+
+    var select = document.createElement("select");
+    select.setAttribute("id", "topicSelect");
+    select.classList.add(...["w-50", "fw-bold", "text-center"])
+    for (var i = 0; i < output.data.length; i++) {
+        var option = document.createElement("option");
+        option.setAttribute("value", output.data[i].topicName);
+        option.text = output.data[i].topicName;
+        select.appendChild(option);
+    }
+
+    topicID.appendChild(select);
+
+
+}
 
 const addQuestionButtonClicked = async () => {
-    console.log(topicInput.value)
-    console.log(questionInput.value)
-    console.log(optionOneInput.value)
-    console.log(optionTwoInput.value)
-    console.log(optionThreeInput.value)
-    console.log(optionFourInput.value)
-    console.log(correctAnswer.value)
+    var topicInput = document.getElementById("topicSelect")
+
+    if (topicInput.value == "" || questionInput.value == "" || optionOneInput.value == "" || optionTwoInput.value == "" || optionThreeInput.value == "" || optionFourInput.value == "" || correctAnswer.value == "") {
+        alert("Please fill out all fields.")
+        return
+    }
 
     const res = await fetch("http://localhost:8080/admin/addquestion.php", {
         method: "POST",
@@ -24,5 +54,8 @@ const addQuestionButtonClicked = async () => {
     }),
     });
     const output = await res.json();
-    console.log(output)
+    alert(output.data)
+    form.reset()
 }
+
+window.onload = preloadValues;

@@ -2,6 +2,23 @@
   /* background-color: #b7ac04; */
   background-color: #6e6e6e;
 }
+
+
+
+#main-body{
+    position: relative;
+}
+
+#main-body::after {
+  content: '';
+  background-image: url(/Assets/bg-2.png);
+  position: absolute;
+  width:100%;
+    height:100%;
+  z-index:-1;
+    opacity: 0.3;
+}
+
 .nav-color{
   background-color: #0d2419;
 }
@@ -48,8 +65,8 @@ li {
 }
 
 * {
-  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
-  /* font-family: "Audiowide", serif; */
+  /* font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif */
+  font-family: "Audiowide", serif;
 }
 
 .bg-edu{

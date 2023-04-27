@@ -32,17 +32,18 @@
         <div class="container-fluid">
           <div class="row justify-content-center">
             <div class="col-4">
-              <form>
-                <div class="mb-3">
-                  <label for="topicInput" class="form-label">Topic</label>
-                  <input type="text" class="form-control" id="topicInput" />
+              <form id="form">
+                <div id="topicID" class="mb-3">
+                  <label for="topicInput" class="form-label me-3">Topic: </label>
+                  <!-- <input type="text" class="form-control" id="topicInput" required/> -->
                 </div>
                 <div class="mb-3">
                   <label for="questionInput" class="form-label">Question</label>
                   <textarea
+                    required
                     style="resize: none"
                     rows="4"
-                    type="email"
+                    type="text"
                     class="form-control"
                     id="questionInput"
                   ></textarea>
@@ -52,7 +53,8 @@
                     >Option 1</label
                   >
                   <input
-                    type="email"
+                    required
+                    type="text"
                     class="form-control"
                     id="optionOneInput"
                   />
@@ -61,8 +63,8 @@
                   <label for="optionTwoInput" class="form-label"
                     >Option 2</label
                   >
-                  <input
-                    type="email"
+                  <input required
+                    type="text"
                     class="form-control"
                     id="optionTwoInput"
                   />
@@ -71,8 +73,8 @@
                   <label for="optionThreeInput" class="form-label"
                     >Option 3</label
                   >
-                  <input
-                    type="email"
+                  <input required
+                    type="text"
                     class="form-control"
                     id="optionThreeInput"
                   />
@@ -81,8 +83,8 @@
                   <label for="optionFourInput" class="form-label"
                     >Option 4</label
                   >
-                  <input
-                    type="email"
+                  <input required
+                    type="text"
                     class="form-control"
                     id="optionFourInput"
                   />
