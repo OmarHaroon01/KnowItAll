@@ -35,6 +35,13 @@ async function addTopicButtonClicked() {
     });
     const output = await res.json();
     console.log(output)
+    if (output.data) {
+        alert(output.data)
+        window.location.href = "adminhomepage.html";
+    } else {
+        alert(output.error)
+        window.location.href = "adminhomepage.html";
+    }
     
 
 
