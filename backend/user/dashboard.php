@@ -13,7 +13,7 @@ $sql = "SELECT knowitall.users.fullName, knowitall.quiz_info.topic, knowitall.qu
 knowitall.quiz_info.time
  FROM knowitall.users LEFT JOIN 
 knowitall.quiz_info ON knowitall.users.unid=knowitall.quiz_info.userID 
-where unid = '$unid' ORDER BY knowitall.quiz_info.time DESC LIMIT 35;";
+where unid = '$unid' ORDER BY knowitall.quiz_info.time DESC LIMIT 5;";
 
 $output = mysqli_query($conn, $sql);
 
