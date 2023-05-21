@@ -102,6 +102,7 @@ async function preload() {
       optionDiv.classList.add(...["row", "bg-white", "card"]);
 
       var formParent = document.createElement("div");
+      formParent.id = "formQuestion" + (i + 1) + "option" + (j + 1);
       formParent.classList.add(...["card-body", "d-inline"]);
 
       var optionForm = document.createElement("div");
@@ -136,6 +137,7 @@ window.onload = preload;
 async function submitQuizButtonClicked() {
 
   answersPicked = [];
+  optionPicked = [];
   for (var i = 1; i <= totalQuestions; i++) {
     picked = false;
     for (var j = 1; j <= 4; j++) {
@@ -143,10 +145,12 @@ async function submitQuizButtonClicked() {
       if (option.checked) {
         picked = true;
         answersPicked.push(option.value);
+        optionPicked.push(j)
       }
     }
     if (!picked) {
       answersPicked.push(null);
+      optionPicked.push(null)
     }
   }
   var params = {};
@@ -169,14 +173,37 @@ async function submitQuizButtonClicked() {
   });
   const out = await res.json();
   console.log(out);
+    console.log(correctAnswerList)
+  for (var i = 0; i < correctAnswerList.length; i++) {
+    if (correctAnswerList[i] == answersPicked[i]) {
+      var formParent = document.getElementById("formQuestion" + (i + 1) + "option" + optionPicked[i]);
+      formParent.classList.add(...["text-success", "border", "border-3", "border-success"])
+    } else {
+      if (optionPicked[i] != null){
+      var formParent = document.getElementById("formQuestion" + (i + 1) + "option" + optionPicked[i]);
+      formParent.classList.add(...["text-danger", "border", "border-3", "border-danger"])
+      }
+      var formParent = document.getElementById("formQuestion" + (i + 1) + "option" + correctAnswerList[i][correctAnswerList[i].length - 1]);
+      formParent.classList.add(...["text-success", "border", "border-3", "border-success"])
+    }
+  }
+
 
   if (out.data) {
     alert(out.data);
-    window.location.href = "home.html";
+    var submitButton = document.getElementById("submitButton")
+    submitButton.classList.add("invisible")
+    var closeButton = document.getElementById("closeButton")
+    closeButton.classList.remove("invisible")
+    // window.location.href = "home.html";
   } else {
     alert(out.error);
     window.location.href = "home.html";
   }
 
 
+}
+
+function closeButtonClicked() {
+  window.location.href = "home.html"
 }
