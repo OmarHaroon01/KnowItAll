@@ -35,16 +35,6 @@ if(mysqli_query($conn, $query)){
         answer VARCHAR(255) NOT NULL
     )";
     $output = mysqli_query($conn, $query);
-    
-    //Response Table
-    $query = "CREATE TABLE IF NOT EXISTS knowitall.response (
-        userID VARCHAR(255),
-        questionID VARCHAR(255),
-        FOREIGN KEY (userID) REFERENCES users(unid),
-        FOREIGN KEY (questionID) REFERENCES questions(questionID),
-        correctAnswer VARCHAR(255) NOT NULL
-    )";
-    $output = mysqli_query($conn, $query);
 
     $query = "CREATE TABLE IF NOT EXISTS knowitall.quiz_info (
         userID VARCHAR(255),

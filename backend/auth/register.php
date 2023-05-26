@@ -6,9 +6,9 @@ $input = file_get_contents("php://input");
 $decode = json_decode($input, true);
 
 $unid = uniqid();
-$fullName = $decode["fullName"];
-$email = $decode["email"];
-$password = password_hash($decode["password"], PASSWORD_DEFAULT);
+$fullName = mysqli_real_escape_string($conn, $decode["fullName"]);
+$email = mysqli_real_escape_string($conn, $decode["email"]);
+$password = password_hash(mysqli_real_escape_string($conn, $decode["password"]), PASSWORD_DEFAULT);
 
 $sql = "SELECT * FROM knowitall.users WHERE knowitall.users.email= '$email'";
 
@@ -24,10 +24,6 @@ if (mysqli_num_rows($output) !== 0) {
         if (mysqli_query($conn, $sql)) {
                 echo json_encode(["data" => "Registration Successfull!", "error" => ""]);
         }
-
-
-
-
 }
 
 ?>

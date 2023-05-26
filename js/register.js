@@ -47,10 +47,6 @@ function emailValidation(email) {
 }
 
 async function registerButtonClicked() {
-  console.log(fullnameInput.value);
-  console.log(emailInput.value);
-  console.log(passwordInput.value);
-  console.log(passwordInput2.value);
 
   if (fullnameInput.value == "") {
     errorMessage.classList.remove("invisible");
