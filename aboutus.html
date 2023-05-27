@@ -70,24 +70,24 @@
         <div class="row d-flex justify-content-center my-5 p-2">
           <div class="col-12 col-md-3">
             <img
-              class="card-img-top px-3"
-              src="Assets/omar.jpg"
+              class="card-img-top px-3 lazy"
+              data-src="Assets/omar.jpg"
               alt="Photo of Omar"
             />
             <div class="text-center">Omar Mohammad Haroon</div>
           </div>
           <div class="col-12 col-md-3">
             <img
-              class="card-img-top px-3"
-              src="Assets/momo.jpg"
+              class="card-img-top px-3 lazy"
+              data-src="Assets/momo.jpg"
               alt="Photo of Moumi"
             />
             <div class="text-center">Momotaj Begum Momo</div>
           </div>
           <div class="col-12 col-md-3">
             <img
-              class="card-img-top px-3"
-              src="Assets/moumi.jpg"
+              class="card-img-top px-3 lazy"
+              data-src="Assets/moumi.jpg"
               alt="Photo of Momo"
             />
             <div class="text-center">Mohsina Matin Moumi</div>
@@ -101,5 +101,9 @@
       integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
       crossorigin="anonymous" defer
     ></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.8.3/dist/lazyload.min.js"></script>
+    <script>
+      LL = new LazyLoad();
+    </script>
   </body>
 </html>

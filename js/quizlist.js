@@ -3,6 +3,7 @@ var topicList = []
 var output = []
 
 async function loadingData() {
+    LL = new LazyLoad();
     const res = await fetch("http://localhost:8080/home/quizlist.php", {
         method: "POST",
     });
@@ -28,6 +29,12 @@ async function loadingData() {
         var img = document.createElement("img");
         img.classList.add(...["card-img-top", "h-75"])
         img.src = "http://localhost:8080/images/topiclogos/" + output[i]["topicImageLocation"]
+        
+        if(i > 4)
+        {
+            img.classList.add("lazy");
+            img.setAttribute("data-src", "http://localhost:8080/images/topiclogos/" + output[i]["topicImageLocation"]);
+        }
 
         div2.appendChild(img);
 
