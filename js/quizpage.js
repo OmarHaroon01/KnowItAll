@@ -190,9 +190,9 @@ async function submitQuizButtonClicked() {
   if (out.data) {
     alert(out.data);
     var submitButton = document.getElementById("submitButton")
-    submitButton.classList.add("invisible")
+    submitButton.classList.add("d-none")
     var closeButton = document.getElementById("closeButton")
-    closeButton.classList.remove("invisible")
+    closeButton.classList.remove("d-none")
     // window.location.href = "home.html";
   } else {
     alert(out.error);
