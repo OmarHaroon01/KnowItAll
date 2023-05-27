@@ -8,12 +8,12 @@ async function loadingData() {
     });
     const out = await res.json();
     output = out["data"];
-    //console.log(output);
 
     for (var i = 0; i < output.length; i++) {
 
         var div1 = document.createElement("div");
-        div1.classList.add("col-3")
+        div1.classList.add("col-12");
+        div1.classList.add("col-md-3");
         div1.classList.add("mb-2")
 
         var div2 = document.createElement("div");
@@ -63,18 +63,17 @@ async function loadingData() {
 
 async function onSearchInput() {
     var searchinput = document.getElementById("searchInputId").value.toLowerCase();
-    //console.log(topicList);
     var showTopics = []
     for(var i = 0; i < topicList.length; i++) {
         if(topicList[i].toLowerCase().includes(searchinput)) {
             showTopics.push(i);
         }
     }
-    console.log(showTopics + "***")
     outerRow.innerHTML = ""
     for(var i = 0; i < showTopics.length; i++) {
         var div1 = document.createElement("div");
-        div1.classList.add("col-3")
+        div1.classList.add("col-12")
+        div1.classList.add("col-md-3")
         div1.classList.add("mb-2")
 
         var div2 = document.createElement("div");

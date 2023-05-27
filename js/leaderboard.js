@@ -66,7 +66,6 @@ async function preLoad(topic) {
   });
   const output = await res.json();
   const out = output["data"];
-  console.log(out);
 
   if (out.length == 0) {
     var errorDiv = document.createElement("div");

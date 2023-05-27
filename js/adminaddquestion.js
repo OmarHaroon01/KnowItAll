@@ -5,22 +5,19 @@ let optionTwoInput = document.getElementById("optionTwoInput")
 let optionThreeInput = document.getElementById("optionThreeInput")
 let optionFourInput = document.getElementById("optionFourInput")
 let correctAnswer = document.getElementById("correctAnswer")
-var hasReferrer = document.referrer != "";
 var topicID = document.getElementById("topicID")
 var form = document.getElementById("form")
 
-if (!hasReferrer) {
+if (document.referrer != "http://127.0.0.1:5500/adminhomepage.html") {
   window.location.href = "admin.html";
 }
 
 
-
 const preloadValues = async () => {
     const res = await fetch("http://localhost:8080/admin/gettopics.php", {
-      method: "POST",
+      method: "GET",
     });
     const output = await res.json();
-    console.log(output);
 
     var select = document.createElement("select");
     select.setAttribute("id", "topicSelect");
@@ -33,8 +30,6 @@ const preloadValues = async () => {
     }
 
     topicID.appendChild(select);
-
-
 }
 
 const addQuestionButtonClicked = async () => {

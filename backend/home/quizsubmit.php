@@ -8,7 +8,7 @@ $decode = json_decode($input, true);
 
 $unid = mysqli_real_escape_string($conn, $decode["unid"]);
 $topic = mysqli_real_escape_string($conn, $decode["topic"]);
-$correctAnswer = mysqli_real_escape_string($conn, $decode["correctAnswer"]);
+$correctAnswer = $decode["correctAnswer"];
 $answersPicked = $decode["answersPicked"];
 
 $score = 0;

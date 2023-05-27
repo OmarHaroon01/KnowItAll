@@ -2,11 +2,6 @@ let username = document.getElementById("username");
 let quizNumber = document.getElementById("quizNumber");
 let recentQuiz = document.getElementById("recent-quiz");
 
-window.addEventListener("DOMContentLoaded", function () {
-  $("#nav-placeholder").load("navbar.html");
-  $("#footer-placeholder").load("footer.html");
-});
-
 function getCookie(cname) {
   let name = cname + "=";
   let ca = document.cookie.split(";");
@@ -35,7 +30,6 @@ async function preLoad() {
     body: JSON.stringify({ unid: unid }),
   });
   const output = await res.json();
-  console.log(output);
   if (output.length == 0) {
     window.location.href = "home.html"
     return;

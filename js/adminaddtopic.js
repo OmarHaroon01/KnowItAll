@@ -1,8 +1,6 @@
-var hasReferrer = document.referrer != ""
 
-if (document.referrer == "") {
-    window.location.href = "admin.html";
-
+if (document.referrer != "http://127.0.0.1:5500/adminhomepage.html") {
+  window.location.href = "admin.html";
 }
 
 async function addTopicButtonClicked() {
@@ -34,7 +32,6 @@ async function addTopicButtonClicked() {
         body: formData
     });
     const output = await res.json();
-    console.log(output)
     if (output.data) {
         alert(output.data)
         window.location.href = "adminhomepage.html";

@@ -21,6 +21,7 @@
       crossorigin="anonymous"
     />
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="js/home.js"></script>
   </head>
 
   <body class="d-flex flex-column min-vh-100">
@@ -35,20 +36,18 @@
         />
         <div class="position-absolute bottom-0 start-50 translate-middle-x">
           <div
-            class="d-flex flex-column align-item-center justify-content-center mx-5"
+            class="col-2 m-auto w-auto border border-5 border-dark py-md-3 py-0 mt-4"
+            style="background-color: #103b58"
           >
-            <div
-              class="col-2 m-auto w-75 border border-5 border-dark p-5"
-              style="background-color: #103b58"
-            >
-              <div class="text-center" style="color: aliceblue">
-                <span class="display-2 fw-bold d-block my-3 text-warning"
-                  >KNOW IT ALL</span
-                >
-                <span class="display-4 fw-bold d-block my-3 text-warning"
-                  >TRY QUIZ IN VARIOUS TOPICS</span
-                >
-              </div>
+            <div class="text-center">
+              <span class="fw-bold d-block my-3 text-warning"
+              style="font-size: 4vw;"
+                >KNOW IT ALL</span
+              >
+              <span class="fw-bold d-block my-3 text-warning"
+              style="font-size: 3vw;"
+                >TRY QUIZ IN VARIOUS TOPICS</span
+              >
             </div>
           </div>
         </div>
@@ -81,7 +80,10 @@
           </div>
           <div class="col-md-3 col-12">
             <div class="d-flex">
-              <a class="btn btn-lg btn-outline-primary" href="leaderboard.html?topic=all">
+              <a
+                class="btn btn-lg btn-outline-primary"
+                href="leaderboard.html?topic=all"
+              >
                 View Leaderboard
               </a>
             </div>
@@ -118,7 +120,7 @@
         <div
           class="row align-items-center align-items-lg-stretch justify-content-center justify-content-lg-evenly flex-column flex-lg-row h-100"
         >
-          <div class="col-lg-2 col-4 bg-white">
+          <div class="col-lg-2 col-md-4 col-11 bg-white">
             <div class="d-flex flex-column align-items-center p-4">
               <i class="fa fa-3x fa-map-marker my-3"></i>
               <div class="fs-5 text-center fw-bold">MAIN OFFICE</div>
@@ -127,21 +129,21 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-2 col-4 bg-white">
+          <div class="col-lg-2 col-md-4 col-11 bg-white">
             <div class="d-flex flex-column align-items-center p-4">
               <i class="fa fa-3x fa-phone my-3"></i>
               <div class="fs-5 fw-bold text-center">PHONE NUMBER</div>
               <div class="fs-6 text-center">+XXXXXXXXXXX</div>
             </div>
           </div>
-          <div class="col-lg-2 col-4 bg-white">
+          <div class="col-lg-2 col-md-4 col-11 bg-white">
             <div class="d-flex flex-column align-items-center p-4">
               <i class="fa fa-3x fa-fax my-3"></i>
               <div class="fs-5 fw-bold text-center">FAX</div>
               <div class="fs-6 text-center">1-234-567-890</div>
             </div>
           </div>
-          <div class="col-lg-2 col-4 bg-white">
+          <div class="col-lg-2 col-md-4 col-11 bg-white">
             <div class="d-flex flex-column align-items-center p-4">
               <i class="fa fa-3x fa-envelope my-3"></i>
               <div class="fs-5 fw-bold text-center">EMAIL</div>
@@ -158,6 +160,5 @@
       integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
       crossorigin="anonymous"
     ></script>
-    <script src="js/home.js"></script>
   </body>
 </html>

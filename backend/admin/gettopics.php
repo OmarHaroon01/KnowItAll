@@ -2,12 +2,6 @@
 
 include '../config.php';
 
-$input = file_get_contents("php://input");
-
-$decode = json_decode($input, true);
-
-
-
 $sql = "SELECT knowitall.topics.topicName FROM knowitall.topics";
 $output = mysqli_query($conn, $sql);
 $rows = array();

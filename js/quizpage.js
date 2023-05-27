@@ -60,14 +60,14 @@ async function preload() {
     window.location.href = "quizlist.html";
   }
 
-  console.log(output);
+
   totalQuestions = output.length;
 
   for (var i = 0; i < output.length; i++) {
     correctAnswerList.push(output[i]["answer"]);
 
     var outerDiv = document.createElement("div");
-    outerDiv.classList.add(...["col-6", "m-3"]);
+    outerDiv.classList.add(...["col-12", "col-md-6", "m-3"]);
 
     var questionNoDiv = document.createElement("div");
     questionNoDiv.classList.add(
@@ -172,8 +172,6 @@ async function submitQuizButtonClicked() {
     }),
   });
   const out = await res.json();
-  console.log(out);
-    console.log(correctAnswerList)
   for (var i = 0; i < correctAnswerList.length; i++) {
     if (correctAnswerList[i] == answersPicked[i]) {
       var formParent = document.getElementById("formQuestion" + (i + 1) + "option" + optionPicked[i]);

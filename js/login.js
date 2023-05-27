@@ -26,7 +26,6 @@ const validate = async () => {
     d.setTime(d.getTime() + 30 * 86400 * 1000);
     expiryDate = "expires=" + d.toUTCString();
     document.cookie = "userId=" + output.data + ";" + expiryDate + ";";
-    //console.log(expiryDate);
   } else {
     document.cookie = "userId=" + output.data + ";";
   }
