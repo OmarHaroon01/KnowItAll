@@ -4,7 +4,7 @@ include '../config.php';
 $input = file_get_contents("php://input");
 $decode = json_decode($input, true);
 
-$topic = $decode["topic"];
+$topic = mysqli_real_escape_string($conn, $decode["topic"]);
 
 // $query = "SELECT * FROM knowitall.quiz_info WHERE topic = '$topic' ORDER BY score DESC, time ASC;";
 

@@ -6,7 +6,7 @@ $input = file_get_contents("php://input");
 
 $decode = json_decode($input, true);
 
-$unid = $decode["unid"];
+$unid = mysqli_real_escape_string($conn, $decode["unid"]);
 
 $sql = "SELECT * FROM knowitall.users where unid = '$unid';";
 

@@ -7,13 +7,13 @@ $input = file_get_contents("php://input");
 $decode = json_decode($input, true);
 
 $unid = uniqid();
-$topic = $decode["topic"];
-$question = $decode["question"];
-$optionOne = $decode["optionOne"];
-$optionTwo = $decode["optionTwo"];
-$optionThree = $decode["optionThree"];
-$optionFour = $decode["optionFour"];
-$answer = $decode["correctAnswer"];
+$topic = mysqli_real_escape_string($conn, $decode["topic"]);
+$question = mysqli_real_escape_string($conn, $decode["question"]);
+$optionOne = mysqli_real_escape_string($conn, $decode["optionOne"]);
+$optionTwo = mysqli_real_escape_string($conn, $decode["optionTwo"]);
+$optionThree = mysqli_real_escape_string($conn, $decode["optionThree"]);
+$optionFour = mysqli_real_escape_string($conn, $decode["optionFour"]);
+$answer = mysqli_real_escape_string($conn, $decode["correctAnswer"]);
 
 
 
