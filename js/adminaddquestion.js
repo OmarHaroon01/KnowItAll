@@ -9,13 +9,13 @@ var topicID = document.getElementById("topicID")
 var form = document.getElementById("form")
 
 if (document.referrer != "http://127.0.0.1:5500/adminhomepage.html") {
-  window.location.href = "admin.html";
+    window.location.href = "admin.html";
 }
 
 
 const preloadValues = async () => {
     const res = await fetch("http://localhost:8080/admin/gettopics.php", {
-      method: "GET",
+        method: "GET",
     });
     const output = await res.json();
 
@@ -42,11 +42,12 @@ const addQuestionButtonClicked = async () => {
 
     const res = await fetch("http://localhost:8080/admin/addquestion.php", {
         method: "POST",
-        body: JSON.stringify({ "topic": topicInput.value, "question": questionInput.value,
-        "optionOne": optionOneInput.value, "optionTwo": optionTwoInput.value,
-        "optionThree": optionThreeInput.value, "optionFour": optionFourInput.value, 
-        "correctAnswer": correctAnswer.value
-    }),
+        body: JSON.stringify({
+            "topic": topicInput.value, "question": questionInput.value,
+            "optionOne": optionOneInput.value, "optionTwo": optionTwoInput.value,
+            "optionThree": optionThreeInput.value, "optionFour": optionFourInput.value,
+            "correctAnswer": correctAnswer.value
+        }),
     });
     const output = await res.json();
     alert(output.data)

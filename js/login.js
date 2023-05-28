@@ -18,6 +18,7 @@ const validate = async () => {
 
   if (output.error) {
     spanError.classList.remove("d-none");
+    spanError.innerHTML = output.error
     return;
   }
 

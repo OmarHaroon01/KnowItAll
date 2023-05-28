@@ -14,16 +14,18 @@ $output = mysqli_query($conn, $query);
 
 if (mysqli_num_rows($output) !== 0) {
         $row = mysqli_fetch_assoc($output);
-        if($row["active"] != 1) {
-                echo json_encode(["data" => "", "error" => "Contact Admin you have been banned"]);
-                return;   
-        }
         $dbpassword = $row["password"] ;
         if (password_verify($password, $dbpassword)) {
-                echo json_encode(["data" =>  $row["unid"], "error" => ""]);
-                return;
+                if(strcmp($row["active"], "0") == 0) {
+                        echo json_encode(["data" => "", "error" => "Contact Admin you have been banned"]);
+                        return;   
+                } else {
+                        echo json_encode(["data" =>  $row["unid"], "error" => ""]);
+                        return;
+                }
         }
 }
 echo json_encode(["data" => "", "error" => "Invalid Credentials!"]);
+
 
 ?>
