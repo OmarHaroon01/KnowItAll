@@ -17,7 +17,8 @@ if(mysqli_query($conn, $query)){
         unid VARCHAR(255) PRIMARY KEY,
         fullName VARCHAR(255) NOT NULL,
         email VARCHAR(255) NOT NULL,
-        password VARCHAR(255) NOT NULL
+        password VARCHAR(255) NOT NULL,
+        active BOOLEAN NOT NULL
     )";
 
     $output = mysqli_query($conn, $query);

@@ -17,8 +17,8 @@ $output = mysqli_query($conn, $sql);
 if (mysqli_num_rows($output) !== 0) {
         echo json_encode(["data" => "", "error" => 'Email already registered']);
 } else {
-        $sql = "INSERT INTO knowitall.users (unid, fullName, email, password)
- VALUES ('$unid', '$fullName', '$email', '$password');";
+        $sql = "INSERT INTO knowitall.users (unid, fullName, email, password, active)
+ VALUES ('$unid', '$fullName', '$email', '$password', TRUE);";
 
 
         if (mysqli_query($conn, $sql)) {

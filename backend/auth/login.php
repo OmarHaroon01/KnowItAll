@@ -14,7 +14,11 @@ $output = mysqli_query($conn, $query);
 
 if (mysqli_num_rows($output) !== 0) {
         $row = mysqli_fetch_assoc($output);
-        $dbpassword = mysqli_real_escape_string($conn, $row["password"]) ;
+        if($row["active"] != 1) {
+                echo json_encode(["data" => "", "error" => "Contact Admin you have been banned"]);
+                return;   
+        }
+        $dbpassword = $row["password"] ;
         if (password_verify($password, $dbpassword)) {
                 echo json_encode(["data" =>  $row["unid"], "error" => ""]);
                 return;
